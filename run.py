@@ -12,8 +12,8 @@ GUESS_BOARD = [[' '] * 8 for x in range(8)] # will hold our guesses: hits & miss
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
 def print_board(board):     # function to define the board
-    print('     A B C D E F G H')
-    print('     ---------------')
+    print('  A B C D E F G H')
+    print('  ---------------')
     row_number = 1
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
@@ -46,6 +46,8 @@ def count_hit_ships(board): #it'll count every time you have a hit & if you hit 
     return count
 
 
-create_ships()
+create_ships(HIDDEN_BOARD)
 turns = 10
+print_board(HIDDEN_BOARD)
+print_board(GUESS_BOARD)
 #while turns > 0:
