@@ -45,9 +45,26 @@ def count_hit_ships(board): #it'll count every time you have a hit & if you hit 
                 count += 1
     return count
 
-
 create_ships(HIDDEN_BOARD)
 turns = 10
-print_board(HIDDEN_BOARD)
-print_board(GUESS_BOARD)
-#while turns > 0:
+while turns > 0:
+    print("Welcome to the Battleship Game!")
+    print_board(GUESS_BOARD)
+    row, column = get_ship_location()
+    if GUESS_BOARD[row][column] == '-':
+        print("You already guessed that...")
+    elif HIDDEN_BOARD[row][column] == 'X':
+        print("Congrats! You've hit a battleship!")
+        GUESS_BOARD[row][column] = 'X'
+        turns -= 1
+    else:
+        print("Sorry, you've missed!")
+        GUESS_BOARD[row][column] = '-'
+        turns -= 1
+    if count_hit_ships(GUESS_BOARD) == 5:
+        print("Congrats, you have sunk all the battleships!")
+        break
+    print("You have" + str(turns) + "turns remaining")
+    if turns = 0:
+        print("Sorry, you've run out of shots, the game's over :-(")
+        break
