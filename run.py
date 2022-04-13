@@ -1,7 +1,10 @@
+#Legend
+# X for placing ship and hit battleship
+# ' ' for available space
+# '-' for missed shot
 
 
-
-
+from random import randint
 
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)] # will hold our ships
 GUESS_BOARD = [[' '] * 8 for x in range(8)] # will hold our guesses: hits & misses
@@ -16,8 +19,12 @@ def print_board(board):     # function to define the board
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
-def create_ships():
-    pass
+def create_ships(board):
+    for ship in range(5):
+        ship_row, ship_column = randint(0, 7), randint(0, 7)
+        while board[ship_row][ship_column] == 'X':
+            ship_row, ship_column = randint(0, 7), randint(0, 7)
+        board[ship_row][ship_column] = 'X'
 
 def get_ship_location():
     pass   # ask user what row and column he will want to guess the location
