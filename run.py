@@ -27,7 +27,14 @@ def create_ships(board):
         board[ship_row][ship_column] = 'X'
 
 def get_ship_location():
-    pass   # ask user what row and column he will want to guess the location
+    row = input("Please enter a ship row from 1 to 8: ")
+    while row not in '12345678':
+        print("Please enter a valid row number (from 1 to 8): ")
+        row = input("Please enter a ship row from 1 to 8: ")
+    column = input("Please enter a ship column A to H: ").upper()
+    while column not in 'ABCDEFGH':
+        print("Please enter a valid column (from A to H): ")
+        column = input("Please enter a ship column A to H: ").upper()   # ask user what row and column he will want to guess the location
 
 def count_hit_ships(): #it'll count every time you have a hit & if you hit all 5 the game is over
     pass
