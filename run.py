@@ -27,14 +27,14 @@ def create_ships(board):
         board[ship_row][ship_column] = 'X'
 
 def get_ship_location():
-    row = input("Please enter a ship row from 1 to 8: ")
+    row = input("Please enter a ship row from 1 to 8:\n")
     while row not in '12345678':
-        print("Please enter a valid row number (from 1 to 8): ")
-        row = input("Please enter a ship row from 1 to 8: ")
-    column = input("Please enter a ship column A to H: ").upper()
+        print("Please enter a valid row number (from 1 to 8):\n")
+        row = input("Please enter a ship row from 1 to 8:\n")
+    column = input("Please enter a ship column A to H:\n").upper()
     while column not in 'ABCDEFGH':
-        print("Please enter a valid column (from A to H): ")
-        column = input("Please enter a ship column A to H: ").upper()
+        print("Please enter a valid column (from A to H):\n")
+        column = input("Please enter a ship column A to H:\n").upper()
     return int(row) - 1, letters_to_numbers[column]   # ask user what row and column he will want to guess the location
 
 def count_hit_ships(board): #it'll count every time you have a hit & if you hit all 5 the game is over
@@ -49,23 +49,23 @@ create_ships(HIDDEN_BOARD)
 # print_board(HIDDEN_BOARD) to test if you can win or lose
 turns = 10
 while turns > 0:
-    print("Welcome to the Battleship Game!")
+    print("Welcome to the Battleship Game!\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
-        print("You already guessed that...")
+        print("You already guessed that...\n")
     elif HIDDEN_BOARD[row][column] == 'X':
-        print("Congrats! You've hit a battleship!")
+        print("Congrats! You've hit a battleship!\n")
         GUESS_BOARD[row][column] = 'X'
         turns -= 1
     else:
-        print("Sorry, you've missed!")
+        print("Sorry, you've missed!\n")
         GUESS_BOARD[row][column] = '-'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
-        print("Congrats, you have sunk all the battleships!")
+        print("Congrats, you have sunk all the battleships!\n")
         break
-    print("You have" + str(turns) + "turns remaining")
+    print("You have " + str(turns) + " shots remaining\n")
     if turns == 0:
         print("Sorry, you've run out of shots, the game's over :-(")
         break
