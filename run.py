@@ -8,12 +8,17 @@ from random import randint
 #import emoji module
 import emoji 
 
-HIDDEN_BOARD = [[' '] * 8 for x in range(8)] # will hold our ships
-GUESS_BOARD = [[' '] * 8 for x in range(8)] # will hold our guesses: hits & misses
+# will hold computer generated hidden ships
+HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
+# will hold player's guesses and record hits and misses
+GUESS_BOARD = [[' '] * 8 for x in range(8)] 
 
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
-def print_board(board):     # function to define the board
+def print_board(board):
+    """
+    Defines the board size
+    """
     print('  A B C D E F G H')
     print('  ---------------')
     row_number = 1
@@ -21,15 +26,22 @@ def print_board(board):     # function to define the board
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
+
 def create_ships(board):
+    """
+    Computer generates 5 ships in 5 unique locations on the hidden board.
+    """
     for ship in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
         board[ship_row][ship_column] = 'X'
 
-def get_ship_location():
 
+def get_ship_location():
+    """
+    Asks user for an input/ guess.
+    """
     while True:
         row = input("\nPlease enter a ship row from 1 to 8:\n")
         if row and row in '12345678':
@@ -48,7 +60,13 @@ def get_ship_location():
             continue
     return int(row) - 1, letters_to_numbers[column]   # ask user what row and column he will want to guess the location
 
-def count_hit_ships(board): #it'll count every time you have a hit & if you hit all 5 the game is over
+
+def count_hit_ships(board):
+    """
+    Counts every time the user has a hit and 
+    if he hits all 5 ships prints that 
+    the game is over.
+    """ 
     count = 0
     for row in board:
         for column in row:
@@ -56,13 +74,14 @@ def count_hit_ships(board): #it'll count every time you have a hit & if you hit 
                 count += 1
     return count
 
+
 create_ships(HIDDEN_BOARD)
 # print_board(HIDDEN_BOARD)  to test if you can win or lose
 turns = 10
 while turns > 0:
-    print("   " + "\U0001F30A \U0001F6A2 " * 6)
+    print("   " + "\U0001F30A \U0001F6A2 " * 8)
     print("  \U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
-    print("   " + "\U0001F30A \U0001F6A2 " * 6)
+    print("   " + "\U0001F30A \U0001F6A2 " * 8)
     # print(" \U0001F30A \U0001F6A2 " * 6)
     print("\n")
     print_board(GUESS_BOARD)
