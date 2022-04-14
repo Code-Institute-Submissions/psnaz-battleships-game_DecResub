@@ -76,14 +76,20 @@ def count_hit_ships(board):
 
 
 create_ships(HIDDEN_BOARD)
-# print_board(HIDDEN_BOARD)  to test if you can win or lose
+print_board(HIDDEN_BOARD)  #to test if you can win or lose
 turns = 10
 while turns > 0:
     print("   " + "\U0001F30A \U0001F6A2 " * 8)
-    print("  \U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
+    print("\U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
     print("   " + "\U0001F30A \U0001F6A2 " * 8)
-    # print(" \U0001F30A \U0001F6A2 " * 6)
     print("\n")
+    print("The Rules:\n")
+    print("There are only 5 small battleships hiding on the sea\n and you have to locate them and shoot them down.")
+    print(" - You have 10 shots only.")
+    print(" - Every time you locate a ship and sink it,\n an X will appear on the board in front of you.") 
+    print(" - Every time you miss a shot,\n a - will appear on the board in front of you.")
+    print(" - Once you've run out of shots or sank all 5 ships the game's over.")
+    print("Good luck!\nLET'S PLAY!\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
