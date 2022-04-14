@@ -36,7 +36,7 @@ def get_ship_location():
             row = int(row)
             break
         else:
-            print("Sorry,you've entered a wrong number.\n")
+            print(" Sorry,you've entered a wrong number.\n")
             continue
 
     while True:
@@ -44,7 +44,7 @@ def get_ship_location():
         if column and column in 'ABCDEFGH':
             break
         else:
-            print("Sorry,you've entered a wrong letter.\n")
+            print(" Sorry,you've entered a wrong letter.\n")
             continue
     return int(row) - 1, letters_to_numbers[column]   # ask user what row and column he will want to guess the location
 
@@ -60,27 +60,28 @@ create_ships(HIDDEN_BOARD)
 # print_board(HIDDEN_BOARD)  to test if you can win or lose
 turns = 10
 while turns > 0:
-    print(" \U0001F30A \U0001F6A2 " * 6)
+    print("   " + "\U0001F30A \U0001F6A2 " * 6)
     print("  \U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
-    print(" \U0001F30A \U0001F6A2 " * 6)
+    print("   " + "\U0001F30A \U0001F6A2 " * 6)
+    # print(" \U0001F30A \U0001F6A2 " * 6)
     print("\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
-        print("You already guessed that...\U0001F641\n")
+        print(" You already guessed that...\U0001F641\n")
     elif HIDDEN_BOARD[row][column] == 'X':
-        print("Congrats!\U0001F973 You've hit a battleship!\U0001F6A2\n")
+        print(" Congrats!\U0001F973 You've hit a battleship!\U0001F6A2\n")
         GUESS_BOARD[row][column] = 'X'
         turns -= 1
     else:
-        print("Sorry, you've missed!\U0001F641\n")
+        print(" Sorry, you've missed!\U0001F641\n")
         GUESS_BOARD[row][column] = '-'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
-        print("Congrats, you have sunk all the battleships!\U0001F973\n")
+        print(" Congrats, you have sunk all the battleships!\U0001F973\n")
         print(" \U0001F973 " * 10)
         break
-    print(f"You have {turns} shots remaining.\n")
+    print(f" You have {turns} shots remaining.\n")
     if turns == 0:
-        print("Sorry, you've run out of shots, the game's over \U0001F641")
+        print(" Sorry, you've run out of shots, the game's over \U0001F641")
         break
