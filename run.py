@@ -5,7 +5,8 @@
 
 
 from random import randint
-import emoji #import emoji module
+#import emoji module
+import emoji 
 
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)] # will hold our ships
 GUESS_BOARD = [[' '] * 8 for x in range(8)] # will hold our guesses: hits & misses
@@ -56,10 +57,13 @@ def count_hit_ships(board): #it'll count every time you have a hit & if you hit 
     return count
 
 create_ships(HIDDEN_BOARD)
-print_board(HIDDEN_BOARD) # to test if you can win or lose
+# print_board(HIDDEN_BOARD)  to test if you can win or lose
 turns = 10
 while turns > 0:
-    print("WELCOME to the BATTLESHIPS GAME!\U0001F6A2\n")
+    print(" \U0001F30A \U0001F6A2 " * 6)
+    print("  \U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
+    print(" \U0001F30A \U0001F6A2 " * 6)
+    print("\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
@@ -74,7 +78,7 @@ while turns > 0:
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
         print("Congrats, you have sunk all the battleships!\U0001F973\n")
-        print("\U0001F973" * 10)
+        print(" \U0001F973 " * 10)
         break
     print(f"You have {turns} shots remaining.\n")
     if turns == 0:
