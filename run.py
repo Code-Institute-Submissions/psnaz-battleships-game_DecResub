@@ -8,10 +8,10 @@ from random import randint
 #import emoji module
 import emoji 
 
-# will hold computer generated hidden ships
-HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
+# will hold computer generated hidden ships 
+HIDDEN_BOARD = [['  '] * 8 for x in range(8)] #originally just one space,now 2
 # will hold player's guesses and record hits and misses
-GUESS_BOARD = [[' '] * 8 for x in range(8)] 
+GUESS_BOARD = [['  '] * 8 for x in range(8)] #originnally just 1 space
 
 letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
 
@@ -19,8 +19,8 @@ def print_board(board):
     """
     Defines the board size
     """
-    print('  A B C D E F G H')
-    print('  ---------------')
+    print('  A  B  C  D  E  F  G  H') #originally just 1 space, now 2
+    print('  --------------------')
     row_number = 1
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
@@ -84,23 +84,23 @@ while turns > 0:
     print("   " + "\U0001F30A \U0001F6A2 " * 8)
     print("\n")
     print("The Rules:\n")
-    print("There are only 5 small battleships hiding on the sea\n and you have to locate them and shoot them down.")
+    print(" - There are only 5 small battleships hiding on the sea\n and you have to locate them and shoot them down.")
     print(" - You have 10 shots only.")
-    print(" - Every time you locate a ship and sink it,\n an X will appear on the board in front of you.") 
-    print(" - Every time you miss a shot,\n a - will appear on the board in front of you.")
-    print(" - Once you've run out of shots or sank all 5 ships the game's over.")
-    print("Good luck!\nLET'S PLAY!\n")
+    print(" - Every time you locate a ship and sink it,\n \U0001F6A2 will appear on the board in front of you.") 
+    print(" - Every time you miss a shot,\n \U0001F30A will appear on the board in front of you.")
+    print(" - Once you've run out of shots or sank all 5 ships\n the game's over.\n")
+    print("Good luck! LET'S PLAY!\n")
     print_board(GUESS_BOARD)
     row, column = get_ship_location()
     if GUESS_BOARD[row][column] == '-':
         print(" You already guessed that...\U0001F641\n")
     elif HIDDEN_BOARD[row][column] == 'X':
         print(" Congrats!\U0001F973 You've hit a battleship!\U0001F6A2\n")
-        GUESS_BOARD[row][column] = 'X'
+        GUESS_BOARD[row][column] = '\U0001F6A2'  #'X'
         turns -= 1
     else:
         print(" Sorry, you've missed!\U0001F641\n")
-        GUESS_BOARD[row][column] = '-'
+        GUESS_BOARD[row][column] = '\U0001F30A'  # '-'
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
         print(" Congrats, you have sunk all the battleships!\U0001F973\n")
