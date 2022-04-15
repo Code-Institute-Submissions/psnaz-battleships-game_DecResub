@@ -43,7 +43,7 @@ def get_ship_location():
     Asks user for an input/ guess.
     """
     while True:
-        row = input("\nPlease enter a ship row from 1 to 8:\n")
+        row = input("\n \U0001F447 Please enter a ship row from 1 to 8:\n")
         if row and row in '12345678':
             row = int(row)
             break
@@ -52,7 +52,7 @@ def get_ship_location():
             continue
 
     while True:
-        column = input("\nPlease enter a ship column from A to H:\n").upper()
+        column = input("\n \U0001F447 Please enter a ship column from A to H:\n").upper()
         if column and column in 'ABCDEFGH':
             break
         else:
