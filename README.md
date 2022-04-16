@@ -186,12 +186,21 @@ I would like to say a BIG thank you to :
 
 The [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project.
 
-- pep8online.com - Results
+- pep8online.com - See results below
+
+![test results](docs/images/test.png)
 
 
 -----
 
-## Unfixed Bugs
+## Fixed Bugs
+
+![empty string input](docs/images/empty-string-input.png)
+
+
+Originally, there was a bug when a user would press enter when asked for input (Enter number or letter.The program would throw an error when an empty string entered, this was fixed.
+
+
 -----
 
 ## Deployment
