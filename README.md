@@ -2,19 +2,21 @@
 ![Battleships mockup](docs/images/battleships-mockup.png)
 
 # BATTLESHIPS GAME
------
+
 Welcome to the Battleships, a fun online game for everyone who likes guessing!
 
 Would you like to have fun and play a guessing game? Learn how to read coordinates and have fun guessing the location of small battleships. Can you locate all five battleships before you run out of shots? Let’s find out!
 
+-----
 
 ## Showcase
------
+
 A deployed link to the application can be found [here](https://battleship-game-by-ps.herokuapp.com/) and the Github repository link can be found [here.](https://github.com/psnaz/battleships-game)
 
+-----
 
 ## Features
------
+
 This simple online application is based on the traditional strategy board game Battleships played by two players. Battleships is a single player online application that teaches the user to state coordinates while playing a fun guessing game. The computer generates 5 single field battleships that are concealed on the board hidden from the player. On the screen the player can see a guessing board that records his guesses - hits or misses. 
 
 
@@ -75,9 +77,10 @@ The player loses the game if he runs out of his 10 shots before he shoots down a
 
 ![Lost](docs/images/lost.png)
 
+-----
 
 ## User Experience (UX)
------
+
 
 ### User Stories
 
@@ -92,9 +95,10 @@ The benefit of this project is fun and learning at the same time.
 - As an end user I want to receive clear instructions to be able to understand what this game is about, how to play it and be notified if I won or lost.
 - As an end user I want to be able to read and understand the instructions easily.
 
+-----
 
 ## Strategy
------
+
 ### Steps Taken
 
 - Various Battleships game and tutorials researched on Google and Youtube
@@ -109,9 +113,10 @@ The benefit of this project is fun and learning at the same time.
 - Project finalized and tested
 - Project submitted to the Code Institute for marking
 
+-----
 
 ## Technologies Used
------
+
 
 ### Languages Used
 
@@ -122,38 +127,60 @@ The benefit of this project is fun and learning at the same time.
 - Git: Git was used for version control by utilizing the Gitpod terminal - to commit to Git and push to GitHub
 - GitHub: Github is used to store the project's code after being pushed from Git.
 - Heroku: Heroku used to deploy the online application
+- Emojis module imported: emoji==1.7.0
 
+-----
 
 ## Credits
------
 
 ### Code
 
 #### The majority of the code came from:
 
 - [’How to code Battleship in Python - Single Player Game’ tutorial](https://www.youtube.com/watch?v=tF1WRCrd_HQ) by Knowledge Mavens.
+
 - CI Love Sandwiches Walkthrough project 
 
 #### Otherwise based on the Diploma in Software Development study materials and my notes taken while going through the materials.
 
 #### Other materials studied:
 
-## Content
 -----
+
+## Content
+
 -All content was written by the developer.
 
 ### Media
 
+- Emojis sourced from [unicode.org](https://unicode.org/emoji/charts/full-emoji-list.html#1f6a2)
+
+
 ### Acknowledgements
 
+I would like to say a BIG thank you to :
+- [Shellie Downnie](https://www.linkedin.com/in/shelliedownie-softwaredeveloper/) – CI student I meant on a webinar and via LinkedIn. and her fun game project ‘Don't Step in the Poop’ that made me aware of being able to use colours and emojis in Python  
+- Tutor support at Code Institute for their support.
+- Code Institute Slack Community for all their advice and support.
+- My husband and our boys for having tonnes of patience with me being on the computer hours no end 
+
+-----
+
 ## Testing
+
+The [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project.
+
+- pep8online.com - Results
+
+
 -----
 
 ## Unfixed Bugs
 -----
 
 ## Deployment
------
+
+### Deployment to Heroku
 
 This site was deployed to Heroku pages by taking the following steps:
 1. Log into your Heroku account
@@ -172,9 +199,10 @@ This site was deployed to Heroku pages by taking the following steps:
 
 If you are interested how to fork this repository or how to make a local clone, this information can be found in Github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
+-----
 
 ## Notes
------
+
 Unfortunately, I was not able to use my mentor’s help for this project as it took me much longer to go through the study materials. By then I felt it was pointless to start scheduling mentoring sessions. Also, I changed my mentor after the project 2 submission, so I only managed to schedule an introductory session. Also, later on my mentor’s availability around 2 weeks before Easter was very limited and I therefore decided to proceed with my project without my mentor’s help which obviously was not ideal.
 I read the Project 3 Portfolio Guide and once I completed the Love Sandwiches walkthrough project decided to learn how to make the Battleship game rather than project focused on processing data. I mistakenly thought that the aim was to learn how to make the Battleship game and that’s why I watched quite a few tutorials and then decided to follow one () that I thought was well structured  despite having a bug because I was confident that I could fix it and possibly add to the game if I have a reasonable amount of time left.
 
@@ -182,3 +210,4 @@ I was able to fix the bug (if user pressed enter which was a string with an empt
 
 Unfortunately, I came across  the Portfolio Project scope( Project Portfolio  Portfolio 3  Portfolio Project Scope)just two days before the project deadline which was too late so I am very concerned that my project doesn’t contain enough code produced just by myself.
 
+-----
