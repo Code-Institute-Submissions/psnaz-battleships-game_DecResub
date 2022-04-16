@@ -13,6 +13,7 @@ Would you like to have fun and play a guessing game? Learn how to read coordinat
 
 A deployed link to the application can be found [here](https://battleship-game-by-ps.herokuapp.com/) and the Github repository link can be found [here.](https://github.com/psnaz/battleships-game)
 
+
 -----
 
 ## Features
@@ -135,7 +136,7 @@ The benefit of this project is fun and learning at the same time.
 
 ### Code
 
-#### The majority of the code came from:
+#### If not markeed otherwise in run.py file, the majority of the code came from:
 
 - [’How to code Battleship in Python - Single Player Game’ tutorial](https://www.youtube.com/watch?v=tF1WRCrd_HQ) by Knowledge Mavens.
 
@@ -144,6 +145,20 @@ The benefit of this project is fun and learning at the same time.
 #### Otherwise based on the Diploma in Software Development study materials and my notes taken while going through the materials.
 
 #### Other materials studied:
+
+1. 5 Video tutorials by Dr Codie:
+Part 1
+- [Python Coding Example]( https://youtu.be/Ej7I8BPw7Gk) 
+- [Python Coding Example | 1]( https://youtu.be/EziS2eGZGz4)
+Part 2
+- [Python Coding Example Random | II](https://youtu.be/r9yXpel08AA)
+Part 3
+- [Python Coding Example | III | End Game | I](https://youtu.be/RqyR-naxh60)
+- [Python Coding Example | III | End Game | II](https://youtu.be/aMLSS-JVYZk) 
+Final Game
+[Python Coding Example Video](https://youtu.be/GmWHhAGvaQA) 
+
+2. [The Modern Python 3 Bootcamp by by Colt Steele](https://www.udemy.com/course/the-modern-python3-bootcamp)
 
 -----
 
