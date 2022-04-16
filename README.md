@@ -74,9 +74,10 @@ The player wins the game if he shoots down all five ships before he runs out of 
 
 Or 
 
-The player loses the game if he runs out of his 10 shots before he shoots down all five ships.
+The player loses the game if he runs out of his 10 shots before he sinks all five ships.
+The player is shown where all the ships were hidden. 
 
-![Lost](docs/images/lost.png)
+![reveal ships](docs/images/reveal-ships.png)
 
 -----
 
