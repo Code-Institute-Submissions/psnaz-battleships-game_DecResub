@@ -1,19 +1,28 @@
-#Legend
+# Legend
 # X for placing ship and hit battleship
 # ' ' for available space
 # '-' for missed shot
 
 
 from random import randint
-#import emoji module
+# import emoji module
 import emoji 
 
-# will hold computer generated hidden ships 
+# will hold computer generated hidden ships
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
 # will hold player's guesses and record hits and misses
 GUESS_BOARD = [[' '] * 8 for x in range(8)]
 # indexing horizontal row
-letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
+letters_to_numbers = {
+    'A': 0,
+    'B': 1,
+    'C': 2,
+    'D': 3,
+    'E': 4,
+    'F': 5,
+    'G': 6,
+    'H': 7
+    }
 
 def print_board(board):
     """
@@ -42,7 +51,7 @@ def create_ships(board):
 def get_ship_location():
     """
     Asks user for an input/ guess of coordinates.
-    Line 46 to 61 my code came up together with the tutor
+    Line 46 to 61 my code - came up together with the tutor
     to fix the bug so that an empty string - when player hits 
     enter, wouldn't throw an error.
     """
@@ -56,7 +65,7 @@ def get_ship_location():
             continue
 
     while True:
-        column = input("\n \U0001F447 Please enter a ship column from A to H:\n").upper()
+        column = input("\U0001F447 Enter a ship column from A to H:\n").upper()
         if column and column in 'ABCDEFGH':
             break
         else:
@@ -83,9 +92,11 @@ def count_hit_ships(board):
 def main():
     """
     Runs all the functions
+    The computer creates all the ships on the hidden board,
+    as long as the player has more than 0 shots,
+    he can shoot and hits and misses are being recorded.
     """
     create_ships(HIDDEN_BOARD)
-    print_board(HIDDEN_BOARD)  # to test if you can win or lose
     turns = 10
     while turns > 0:
         print_board(GUESS_BOARD)
@@ -101,26 +112,31 @@ def main():
             GUESS_BOARD[row][column] = '-'
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
-            print(" Congrats,\U0001F44F you have sunk all the battleships!\U0001F4AA\n")
+            print(" Congrats,\U0001F44F you have sunk all the battleships!\n")
             print(" \U0001F973 " * 10) # my code
             break
-        print(f" \U0001F9E8 You have {turns} shots remaining.\n")
+        # my code f-string
+        print(f" \U0001F9E8 You have {turns} shots remaining.\n") 
         if turns == 0:
-            print(" Sorry, you've run out of shots, the game's over \U0001F641\n")
-            print("Here's where all the ships were hiding... \U0001F447\n") # my code
-            print_board(HIDDEN_BOARD) # my code
+            print("Sorry, you've run out of shots, game over\U0001F641\n")
+            # my code
+            print("Here's where all the ships were hiding...\U0001F447\n")
+            print_board(HIDDEN_BOARD)
             break
-
+# welcome and rules - my code, removed from the while loop
 print("   " + "\U0001F30A \U0001F6A2 " * 8)
 print("\U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
 print("   " + "\U0001F30A \U0001F6A2 " * 8)
 print("\n")
 print(" \U0001F449 The Rules: \U0001F447\n")
-print(" \U0001F449 There are only 5 small battleships hiding on the sea\n and you have to locate them and shoot them down.\n")
+print(" \U0001F449 There are only 5 small battleships hiding on")
+print("the sea and you have to locate them and shoot them down.\n")
 print(" \U0001F449 You have 10 shots only.\n")
-print(" \U0001F449 Every time you locate a ship and sink it,\n an 'X' will appear on the guess board in front of you.\n") 
-print(" \U0001F449 Every time you miss a shot,\n a '-' will appear on the board in front of you.\n")
-print(" \U0001F449 Once you've run out of shots or sank all 5 ships\n the game's over.\n")
+print(" \U0001F449 Every time you locate a ship and sink it,")
+print("an 'X' will appear on the guess board in front of you.\n")
+print(" \U0001F449 Every time you miss a shot,")
+print("a '-' will appear on the board in front of you.\n")
+print(" \U0001F449 Once you've run out of shots or")
+print("sunk all 5 ships the game's over.\n")
 print(" Good luck!\U0001F340 LET'S PLAY!\n")
 main()
-
