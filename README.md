@@ -21,37 +21,59 @@ This simple online application is based on the traditional strategy board game B
 ### The Welcome Banner and Rules
 The first thing the player sees when the application loads is a welcome banner and underneath are explained the Rules. The welcome banner and rules will display at the beginning of the game only.
 
+![Welcome Banner & Rules](docs/images/welcome-rules.png)
 
 ### Guessing Board
 Below the rules is displayed a guessing board (size 8 x 8) that records the guesses (hits and misses) the player takes. It shows two types of coordinates: Horizontal coordinates are letters from A to H. Vertical coordinates are numbers from 1 to 8. This board will get updated every time the player will take a guess. The hits are displayed as an X and the misses are displayed as a hyphen (-).
+
+![Guessing Board](docs/images/guess-board.png)
 
 #### Asking for Coordinates (User’s Input)
 
 The player is asked to enter a number between 1 and 8 first.
 
+![Enter number](docs/images/enter-number.png)
+
 Then the player is asked to enter a letter between A and H.
 
+![Enter letter](docs/images/enter-letter.png)
 
 If the player states a number or a letter outside the scope or accidentally presses enter key, he will be notified of his error and asked to provide the required input again.
+
+![Wrong number](docs/images/wrong-number.png)
+
+![Wrong letter](docs/images/wrong-letter.png)
+
+
 
 #### Displaying Guesses and Shots Left
 
 Player’s guesses are recorded on the guessing board while the player is always provided with relevant feedback for their action - whether they hit a ship or missed one.
 
+![Hit](docs/images/hit.png)
+
+![Miss](docs/images/miss.png)
+
 They are also notified if they’ve accidentally guessed a coordinate they’ve used already.
 
+![Already guessed](docs/images/already-guessed-that.png)
 
 After every  guess they’re also notified how many shots they have left.
+
+![Shots remaining](docs/images/shots-remaining.png)
 
 #### The End of Game
 
 How does the game end? 
 The player wins the game if he shoots down all five ships before he runs out of shots.
-won-screenshot
+
+![Won](docs/images/won.png)
 
 Or 
 
 The player loses the game if he runs out of his 10 shots before he shoots down all five ships.
+
+![Lost](docs/images/lost.png)
 
 
 ## User Experience (UX)
@@ -155,6 +177,8 @@ If you are interested how to fork this repository or how to make a local clone, 
 -----
 Unfortunately, I was not able to use my mentor’s help for this project as it took me much longer to go through the study materials. By then I felt it was pointless to start scheduling mentoring sessions. Also, I changed my mentor after the project 2 submission, so I only managed to schedule an introductory session. Also, later on my mentor’s availability around 2 weeks before Easter was very limited and I therefore decided to proceed with my project without my mentor’s help which obviously was not ideal.
 I read the Project 3 Portfolio Guide and once I completed the Love Sandwiches walkthrough project decided to learn how to make the Battleship game rather than project focused on processing data. I mistakenly thought that the aim was to learn how to make the Battleship game and that’s why I watched quite a few tutorials and then decided to follow one () that I thought was well structured  despite having a bug because I was confident that I could fix it and possibly add to the game if I have a reasonable amount of time left.
+
 I was able to fix the bug (if user pressed enter which was a string with an empty space’ the app crashed) with some help of tutoring.
+
 Unfortunately, I came across  the Portfolio Project scope( Project Portfolio  Portfolio 3  Portfolio Project Scope)just two days before the project deadline which was too late so I am very concerned that my project doesn’t contain enough code produced just by myself.
 
