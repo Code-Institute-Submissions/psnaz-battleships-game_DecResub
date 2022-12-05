@@ -58,17 +58,19 @@ def get_ship_location():
     enter, wouldn't throw an error.
     """
     while True:
-        row = input("\n \U0001F447 Please enter a ship row from 1 to 8:\n")
-        if row and row in '12345678':
+        row = input("\n \U0001F447 Please enter a ship row from 1 to 8: ")
+        try:
             row = int(row)
+            if row < 1 or row > 8:
+                raise ValueError("Incorrect row value")
             break
-        else:
+        except ValueError:
             print(" Sorry, you've entered a wrong number.\n")
             continue
 
     while True:
-        column = input("\U0001F447 Enter a ship column from A to H:\n").upper()
-        if column and column in 'ABCDEFGH':
+        column = input("\U0001F447 Enter a ship column from A to H: ").upper()
+        if len(column) == 1 and column in 'ABCDEFGH':
             break
         else:
             print(" Sorry, you've entered a wrong letter.\n")
