@@ -1,12 +1,13 @@
-# Legend
-# X for placing ship and hit battleship
-# ' ' for available space
-# '-' for missed shot
-
+"""
+Legend
+X for placing ship and hit battleship
+' ' for available space
+'-' for missed shot
+"""
 
 from random import randint
 # import emoji module
-import emoji 
+# import emoji
 
 # will hold computer generated hidden ships
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
@@ -24,6 +25,7 @@ letters_to_numbers = {
     'H': 7
     }
 
+
 def print_board(board):
     """
     Defines the board size
@@ -32,16 +34,16 @@ def print_board(board):
     print(' ------------------')
     row_number = 1
     for row in board:
-        print("%d|%s|" % (row_number, "|".join(row)))
+        print(f"{row_number}|{'|'.join(row)}|")
         row_number += 1
 
 
 def create_ships(board):
     """
-    Computer generates 5 ships in 5 unique locations 
+    Computer generates 5 ships in 5 unique locations
     on the hidden board marking them with an X.
     """
-    for ship in range(5):
+    for _ in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0, 7), randint(0, 7)
@@ -52,7 +54,7 @@ def get_ship_location():
     """
     Asks user for an input/ guess of coordinates.
     Line 46 to 61 my code - came up together with the tutor
-    to fix the bug so that an empty string - when player hits 
+    to fix the bug so that an empty string - when player hits
     enter, wouldn't throw an error.
     """
     while True:
@@ -72,15 +74,15 @@ def get_ship_location():
             print(" Sorry, you've entered a wrong letter.\n")
             continue
 
-    return int(row) - 1, letters_to_numbers[column] 
+    return int(row) - 1, letters_to_numbers[column]
 
 
 def count_hit_ships(board):
     """
-    Counts every time the user has a hit and 
-    if he hits all 5 ships prints that 
+    Counts every time the user has a hit and
+    if he hits all 5 ships prints that
     the game is over.
-    """ 
+    """
     count = 0
     for row in board:
         for column in row:
@@ -113,16 +115,18 @@ def main():
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
             print(" Congrats,\U0001F44F you have sunk all the battleships!\n")
-            print(" \U0001F973 " * 10) # my code
+            print(" \U0001F973 " * 10)  # my code
             break
         # my code f-string
-        print(f" \U0001F9E8 You have {turns} shots remaining.\n") 
+        print(f" \U0001F9E8 You have {turns} shots remaining.\n")
         if turns == 0:
             print("Sorry, you've run out of shots, game over\U0001F641\n")
             # my code
             print("Here's where all the ships were hiding...\U0001F447\n")
             print_board(HIDDEN_BOARD)
             break
+
+
 # welcome and rules - my code, removed from the while loop
 print("   " + "\U0001F30A \U0001F6A2 " * 8)
 print("\U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
