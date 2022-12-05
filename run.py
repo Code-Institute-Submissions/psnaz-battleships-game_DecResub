@@ -6,8 +6,6 @@ X for placing ship and hit battleship
 """
 
 from random import randint
-# import emoji module
-# import emoji
 
 # will hold computer generated hidden ships
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
