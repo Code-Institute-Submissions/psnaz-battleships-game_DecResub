@@ -99,21 +99,13 @@ The benefit of this project is fun and learning at the same time.
 
 -----
 
-## Strategy
+## Design
 
-### Steps Taken
+### Skeleton
 
-- Various Battleships game and tutorials researched on Google and Youtube
+This game consist of one page which is the terminal page. The terminal page is not responsive hence no wireframes added, but the following flowchart was created using [diagrams.net](https://www.diagrams.net/):
 
-- Problems broken down, outlined and jotted down with pen and paper
-- Tutorial to follow chosen
-- GitHub repository created
-- Building work/ Coding started by following the chosen tutorial
-- Bugs fixed
-- README file content outlined in Google docs
-- No Mentor call scheduled due to time constraints and availability of the metro
-- Project finalized and tested
-- Project submitted to the Code Institute for marking
+![flowchart](docs/images/flowchart.png)
 
 -----
 
