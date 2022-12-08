@@ -4,6 +4,12 @@ X for placing ship and hit battleship
 ' ' for available space
 '-' for missed shot
 """
+"""
+!!! Please note that majority of this code
+comes from How to code Battleship in Python - 
+Single Player Game Youtube tutorial 
+by Knowledge Mavens !!!
+"""
 
 from random import randint
 # import emoji module
@@ -111,7 +117,7 @@ def main():
         row, column = get_ship_location()
         if GUESS_BOARD[row][column] == '-':
             #print(" You already guessed that...\U0001F641\n")
-            print(emoji.emojize('\nYou already guessed that...:slightly_frowning_face:'))
+            print(emoji.emojize('\nYou already guessed that...:slightly_frowning_face:\n'))
         elif HIDDEN_BOARD[row][column] == 'X':
             #print(" Awesome!\U0001F4A5 You've hit a battleship!\U0001F6A2\n")
             print(emoji.emojize("\n Awesome!:collision: You've hit a battleship!:ship:\n"))
@@ -126,7 +132,7 @@ def main():
             #print(" Congrats,\U0001F44F you have sunk all the battleships!\n")
             print(emoji.emojize('\n Congrats,:clapping_hands: you have sunk all the battleships!:flexed_biceps:\n'))
             #print(" \U0001F973 " * 10)  # my code
-            print(emoji.emojize(':partying_face:') *10)
+            print(emoji.emojize(' :partying_face: ') *10)
             break
         # my code f-string
         print(f" \U0001F9E8 You have {turns} shots remaining.\n")
@@ -144,7 +150,7 @@ def main():
 #print("   " + "\U0001F30A \U0001F6A2 " * 8)
 print(emoji.emojize(':water_wave: :ship: ') * 8)
 #print("\U0001F30A  WELCOME to the BATTLESHIPS GAME!\U0001F6A2")
-print(emoji.emojize(':water_wave: WELCOME to the BATTLESHIPS GAME! :ship:'))
+print(emoji.emojize(':water_wave: WELCOME to the BATTLESHIPS GAME!:ship:'))
 #print("   " + "\U0001F30A \U0001F6A2 " * 8)
 print(emoji.emojize(':water_wave: :ship: ') * 8)
 print("\n")
