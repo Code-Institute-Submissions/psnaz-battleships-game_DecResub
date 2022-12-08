@@ -17,6 +17,16 @@ import emoji
 HIDDEN_BOARD = [[' '] * 8 for x in range(8)]
 # will hold player's guesses and record hits and misses
 GUESS_BOARD = [[' '] * 8 for x in range(8)]
+# will help to concatinate printed texts - MY CODE
+PROMPT_ROW_TEXTS = [
+    '\n :backhand_index_pointing_right: Please enter a ship row',
+    'from 1 to 8: '
+]
+PROMPT_COLUMN_TEXTS = [
+    '\n :backhand_index_pointing_right: Please enter a ship column from',
+    'A to H: '
+]
+
 # indexing horizontal row
 letters_to_numbers = {
     'A': 0,
@@ -58,15 +68,13 @@ def get_ship_location():
     """
     Asks user for an input/ guess of coordinates.
     !!! Lines 64-88 my code - came up together with a tutor
-    and also my mentor to fix the bug so that an empty string 
+    and also my mentor to fix the bug so that an empty string
     - when player hits enter, wouldn't throw an error.
     """
+
     while True:
-        row = input(
-            emoji.emojize(
-                '\n :backhand_index_pointing_right: Please enter a ship row\
-                    from 1 to 8: '
-                ))
+        # my code
+        row = input(emoji.emojize(' '.join(PROMPT_ROW_TEXTS)))
         try:
             row = int(row)
             if row < 1 or row > 8:
@@ -74,18 +82,14 @@ def get_ship_location():
             break
         except ValueError:
             print(" Sorry, you've entered a wrong number.\n")
-            continue
 
     while True:
-        column = input(
-            emoji.emojize(
-                '\n :backhand_index_pointing_right: Please enter a ship column from\
-                     A to H:')).upper()
+        # my code
+        column = input(emoji.emojize(' '.join(PROMPT_COLUMN_TEXTS))).upper()
         if len(column) == 1 and column in 'ABCDEFGH':
             break
-        else:
-            print(" Sorry, you've entered a wrong letter.\n")
-            continue
+
+        print(" Sorry, you've entered a wrong letter.\n")
 
     return int(row) - 1, letters_to_numbers[column]
 
@@ -114,7 +118,6 @@ def main():
     create_ships(HIDDEN_BOARD)
     turns = 10
     while turns > 0:
-        # print_board(HIDDEN_BOARD)   # TO BE DELETED ONCE TESTING'S DONE!!!
         print_board(GUESS_BOARD)
         row, column = get_ship_location()
         if GUESS_BOARD[row][column] == '-':
