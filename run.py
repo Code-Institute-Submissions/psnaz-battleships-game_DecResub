@@ -114,7 +114,7 @@ def main():
     create_ships(HIDDEN_BOARD)
     turns = 10
     while turns > 0:
-        print_board(HIDDEN_BOARD)   # TO BE DELETED ONCE TESTING'S DONE!!!
+        # print_board(HIDDEN_BOARD)   # TO BE DELETED ONCE TESTING'S DONE!!!
         print_board(GUESS_BOARD)
         row, column = get_ship_location()
         if GUESS_BOARD[row][column] == '-':

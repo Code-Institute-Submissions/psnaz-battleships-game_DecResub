@@ -122,6 +122,7 @@ This game consist of one page which is the terminal page. The terminal page is n
 - GitHub: Github is used to store the project's code after being pushed from Git.
 - Heroku: Heroku used to deploy the online application
 - Emojis module imported: emoji==1.7.0
+- [diagrams.net](https://www.diagrams.net/) used to create the flowchart
 
 -----
 
@@ -129,7 +130,7 @@ This game consist of one page which is the terminal page. The terminal page is n
 
 ### Code
 
-#### If not markeed otherwise in run.py file, the majority of the code came from:
+#### If not marked otherwise in run.py file, the majority of the code came from:
 
 - [’How to code Battleship in Python - Single Player Game’ tutorial](https://www.youtube.com/watch?v=tF1WRCrd_HQ) by Knowledge Mavens.
 
@@ -153,15 +154,17 @@ Final Game
 
 2. [The Modern Python 3 Bootcamp by by Colt Steele](https://www.udemy.com/course/the-modern-python3-bootcamp)
 
+3. [How to Use the Emoji Module in Python by O.T. Chidalu](https://www.educative.io/answers/how-to-use-the-emoji-module-in-python)
+
+4. [Unicode Emoji List](https://unicode.org/emoji/charts/emoji-list.html)
+
+5. [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
+
 -----
 
 ## Content
 
 -All content was written by the developer.
-
-### Media
-
-- Emojis sourced from [unicode.org](https://unicode.org/emoji/charts/full-emoji-list.html#1f6a2)
 
 
 ### Acknowledgements
@@ -170,7 +173,8 @@ I would like to say a BIG thank you to :
 - [Shellie Downnie](https://www.linkedin.com/in/shelliedownie-softwaredeveloper/) – CI student I meant on a webinar and via LinkedIn. and her fun game project ‘Don't Step in the Poop’ that made me aware of being able to use colours and emojis in Python  
 - Tutor support at Code Institute for their support.
 - Code Institute Slack Community for all their advice and support.
-- My husband and our boys for having tonnes of patience with me being on the computer hours no end 
+- My husband and our boys for having tonnes of patience with me being on the computer hours no end
+- My mentor Guido Cecilio Bernal for his patience, kindness and great advice and support 
 
 -----
 
@@ -191,6 +195,8 @@ The [PEP8](http://pep8online.com/) was used to validate the project code to ensu
 
 
 Originally, there was a bug when a user would press enter when asked for input (Enter number or letter.The program would throw an error when an empty string entered, this was fixed.
+
+Also 
 
 
 -----
@@ -220,11 +226,6 @@ If you are interested how to fork this repository or how to make a local clone, 
 
 ## Notes
 
-Unfortunately, I was not able to use my mentor’s help for this project as it took me much longer to go through the study materials. By then I felt it was pointless to start scheduling mentoring sessions. Also, I changed my mentor after the project 2 submission, so I only managed to schedule an introductory session. Also, later on my mentor’s availability around 2 weeks before Easter was very limited and I therefore decided to proceed with my project without my mentor’s help which obviously was not ideal.
-I read the Project 3 Portfolio Guide and once I completed the Love Sandwiches walkthrough project decided to learn how to make the Battleship game rather than project focused on processing data. I mistakenly thought that the aim was to learn how to make the Battleship game and that’s why I watched quite a few tutorials and then decided to follow one () that I thought was well structured  despite having a bug because I was confident that I could fix it and possibly add to the game if I have a reasonable amount of time left.
-
 I was able to fix the bug (if user pressed enter which was a string with an empty space’ the app crashed) with some help of tutoring.
-
-Unfortunately, I came across  the Portfolio Project scope( Project Portfolio  Portfolio 3  Portfolio Project Scope)just two days before the project deadline which was too late so I am very concerned that my project doesn’t contain enough code produced just by myself.
 
 -----
