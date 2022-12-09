@@ -54,7 +54,9 @@ This game consist of one page which is the terminal page. The terminal page is n
 
 -----
 
-## Features
+## FEATURES
+
+### Current Features
 
 This simple online application is based on the traditional strategy board game Battleships played by two players. Battleships is a single player online application that teaches the user to state coordinates while playing a fun guessing game. The computer generates 5 single field battleships that are concealed on the board hidden from the player. On the screen the player can see a guessing board that records his guesses - hits or misses. 
 
@@ -169,11 +171,13 @@ Final Game
 
 5. [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/)
 
+6. [Stackoverflow](https://stackoverflow.com/) - used as the main troubleshooting go to resource
+
 -----
 
 ## Content
 
--All content was written by the developer.
+All content was written by the developer.
 
 
 ### Acknowledgements
@@ -191,11 +195,24 @@ I would like to say a BIG thank you to :
 
 ### User Stories Testing
 
-All the features of the application have been tested during development and once deployed. All known input bugs have been fixed.
+
+I have tested all the above described features of this app manually by carrying out the following tests:
+
+- Step 1: adding various incorrect and multiple characters into both of the user input fields (enter a ship row from 1 to 8/ enter a ship column from A to H). The only time the application breaks is when CTRL + C and CTRL + D are used which is a standard way to stop running a python script. As this a part of the terminal functionality this is not to be fixed. I have double-checked this with the tutoring service.
+
+- Step 2: testing the correct display of ‘hit’/ ‘ miss’ / ‘you have X shots left’ features was carried out at the same time as step 1 while the ‘hidden board’ (where the coordinates of the battleships were created) was temporarily displayed as a part of a testing mode to facilitate and speed up the guessing process. All options were displayed correctly in the relevant situations and reaching the relevant step in the game.
+
+To sum up, when tested manually on my desktop and a mobile phone (Samsung A6) all the functionalities and features were working properly as described in the Features Section above.
+The
+
+As all our family devices are Microsoft or Android based, I had not the opportunity to test the app on Safari web browser, I have only tested on Chrome, Microsoft Edge and Mozilla Firefox. When tested on Mozilla Firefox, unfortunately, the emojis don’t display properly - only the left half of each emoji image is always displayed - see the picture below, but all the functionalities work properly. 
+
+![Firefox test results](docs/images/firefox-test.png)
+
 
 ### Validation
 
-Originally, the [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project. However, by the time I finished amending and testing this project, the service was no longer available and I had to use a different Python validation service - Pythonchecker.com. 
+Originally, the [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project. However, by the time I finished amending and testing this project, the service was no longer available and I had to use a different Python validation service - Pythonchecker.com. No syntax errors have been detected.
 
 - [Pythonchecker](https://www.pythonchecker.com/) - See results below
 
@@ -254,8 +271,3 @@ If you are interested how to fork this repository or how to make a local clone, 
 
 -----
 
-## Notes
-
-I was able to fix the bug (if user pressed enter which was a string with an empty space’ the app crashed) with some help of tutoring.
-
------
