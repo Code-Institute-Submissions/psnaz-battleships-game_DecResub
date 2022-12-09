@@ -40,6 +40,7 @@ letters_to_numbers = {
     'H': 7
     }
 
+
 # Tutorial code - line 44-53
 def print_board(board):
     """
@@ -52,7 +53,8 @@ def print_board(board):
         print(f"{row_number}|{'|'.join(row)}|")
         row_number += 1
 
-# Tutorial code - line 56-65
+
+# Tutorial code - line 58-67
 def create_ships(board):
     """
     Computer generates 5 ships in 5 unique locations
@@ -96,6 +98,7 @@ def get_ship_location():
 
     return int(row) - 1, letters_to_numbers[column]
 
+
 # Tutorial code
 def count_hit_ships(board):
     """
@@ -109,6 +112,7 @@ def count_hit_ships(board):
             if column == 'X':
                 count += 1
     return count
+
 
 # The main ideas taken from tutorial but redone
 def main():
@@ -124,26 +128,26 @@ def main():
         print_board(GUESS_BOARD)
         row, column = get_ship_location()
         if GUESS_BOARD[row][column] == '-':
-            # my code lines 128-130
+            # my code lines 132-134
             print(
                 emoji.emojize(
                     '\nYou already guessed that...:slightly_frowning_face:\n'))
         elif HIDDEN_BOARD[row][column] == 'X':
-            # my code lines 132-135
+            # my code lines 137-139
             print(
                 emoji.emojize(
                     "\n Awesome!:collision: You've hit a battleship!:ship:\n"))
             GUESS_BOARD[row][column] = 'X'
             turns -= 1
         else:
-            # my code lines 140-142
+            # my code lines 144-146
             print(
                 emoji.emojize(
                     "\n Sorry, you've missed! :slightly_frowning_face:\n"))
             GUESS_BOARD[row][column] = '-'
             turns -= 1
         if count_hit_ships(GUESS_BOARD) == 5:
-            # my code lines 146-151
+            # my code lines 151-156
             print(
                 emoji.emojize(
                     '\n Congrats,:clapping_hands: you have sunk \
@@ -155,7 +159,7 @@ def main():
             emoji.emojize(
                 f":firecracker: You have {turns} shots remaining.\n"))
         if turns == 0:
-            # my code lines 158-166
+            # my code lines 163-170
             print(
                 emoji.emojize(
                     "Sorry, you've run out of shots, \
