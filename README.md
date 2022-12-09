@@ -16,6 +16,44 @@ A deployed link to the application can be found [here](https://battleship-game-b
 
 -----
 
+## User Experience (UX)
+
+----
+
+## Strategy
+
+### Project Goals
+
+The target audience (end users) of this project are players of all ages, predominantly children between 7-10 who like guessing games and would like to learn coordinates. 
+
+The end user is looking for a fun way to be entertained while playing a guessing game and also learning to state coordinates.
+
+The benefit of this project is fun and learning at the same time.
+
+### User Stories
+
+- Site User goals:
+    - As an end user I want to have some fun and learn to tell coordinates at the same time.
+    - As an end user I want to get excited about the chance 
+    - As an end user I want to receive clear instructions to be able to understand what this game is about, how to play it and be notified if I won or lost.
+    - As an end user I want to be able to read and understand the instructions easily.
+
+- Site Owner goals:
+    - I want to provide entertaining learning platform to teach how to tell coordinates and practice
+    - I want to give users clear instructions
+
+-----
+
+## Design
+
+### Skeleton
+
+This game consist of one page which is the terminal page. The terminal page is not responsive hence no wireframes added, but the following flowchart was created using [diagrams.net](https://www.diagrams.net/):
+
+![flowchart](docs/images/flowchart.png)
+
+-----
+
 ## Features
 
 This simple online application is based on the traditional strategy board game Battleships played by two players. Battleships is a single player online application that teaches the user to state coordinates while playing a fun guessing game. The computer generates 5 single field battleships that are concealed on the board hidden from the player. On the screen the player can see a guessing board that records his guesses - hits or misses. 
@@ -81,36 +119,7 @@ The player is shown where all the ships were hidden.
 
 -----
 
-## User Experience (UX)
-
-
-### User Stories
-
-The target audience (end users) of this project are players of all ages, predominantly children between 7-10 who like guessing games and would like to learn coordinates. 
-
-The end user is looking for a fun way to be entertained while playing a guessing game and also learning to state coordinates.
-
-The benefit of this project is fun and learning at the same time.
-
-- As an end user I want to have some fun and learn to tell coordinates at the same time.
-- As an end user I want to get excited about the chance 
-- As an end user I want to receive clear instructions to be able to understand what this game is about, how to play it and be notified if I won or lost.
-- As an end user I want to be able to read and understand the instructions easily.
-
------
-
-## Design
-
-### Skeleton
-
-This game consist of one page which is the terminal page. The terminal page is not responsive hence no wireframes added, but the following flowchart was created using [diagrams.net](https://www.diagrams.net/):
-
-![flowchart](docs/images/flowchart.png)
-
------
-
 ## Technologies Used
-
 
 ### Languages Used
 
@@ -171,7 +180,7 @@ Final Game
 
 I would like to say a BIG thank you to :
 - [Shellie Downnie](https://www.linkedin.com/in/shelliedownie-softwaredeveloper/) – CI student I meant on a webinar and via LinkedIn. and her fun game project ‘Don't Step in the Poop’ that made me aware of being able to use colours and emojis in Python  
-- Tutor support at Code Institute for their support.
+- Tutor support at Code Institute for all their help and support.
 - Code Institute Slack Community for all their advice and support.
 - My husband and our boys for having tonnes of patience with me being on the computer hours no end
 - My mentor Guido Cecilio Bernal for his patience, kindness and great advice and support 
@@ -180,12 +189,33 @@ I would like to say a BIG thank you to :
 
 ## Testing
 
-The [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project.
+### User Stories Testing
 
-- pep8online.com - See results below
+All the features of the application have been tested during development and once deployed. All known input bugs have been fixed.
 
-![test results](docs/images/test.png)
+### Validation
 
+Originally, the [PEP8](http://pep8online.com/) was used to validate the project code to ensure that there were no syntax errors in the project. However, by the time I finished amending and testing this project, the service was no longer available and I had to use a different Python validation service - Pythonchecker.com. 
+
+- [Pythonchecker](https://www.pythonchecker.com/) - See results below
+
+![test results - screenshot 1](docs/images/pythonchecker1.png)
+
+![test results - screenshot 2](docs/images/pythonchecker2.png)
+
+![test results - screenshot 3](docs/images/pythonchecker3.png)
+
+![test results - screenshot 4](docs/images/pythonchecker4.png)
+
+![test results - screenshot 5](docs/images/pythonchecker5.png)
+
+![test results - screenshot 6](docs/images/pythonchecker6.png)
+
+![test results - screenshot 7](docs/images/pythonchecker7.png)
+
+![test results - screenshot 8](docs/images/pythonchecker8.png)
+
+![test results - screenshot 9](docs/images/pythonchecker9.png)
 
 -----
 
